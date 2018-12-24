@@ -1,0 +1,115 @@
+.popular-ways
+  &__compass
+    background: url('./compass.svg') no-repeat
+    width: 64px
+    height: 64px
+    margin: 40px auto 24px auto
+  &__text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: 24px
+    font-size: 18px
+    text-align: center
+    color: #4A4A4A
+    &__current-city
+      color: #00ACE2
+      &__edit
+        height: 16px
+        width: 16px
+        background: #FFFFFF url('./edit.svg') no-repeat
+        border: none
+        cursor: pointer
+  &__categories
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    &__category
+      
+      margin: 0 8px
+      flex-basis: 25%
+      cursor: pointer
+      background: #ffffff
+      border: none
+      &__image-wrapper
+        width: 48px
+        height: 48px
+        background: #FFFFFF
+        box-shadow: 0px 4px 16px rgba(74, 74, 74, 0.12)
+        border-radius: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+      &__text
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 12px
+        margin-top: 12px
+        text-align: center
+        color: #00ACE2
+        text-transform: uppercase
+      .active
+        color: #5C5C5C
+        border-bottom: 1px solid #00ACE2
+  &__cards
+    margin-top: 24px
+    &__card
+      background: #FFFFFF
+      box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12)
+      border-radius: 8px
+      margin-top: 12px
+      &__image-wrapper
+        overflow: hidden
+        height: 140px
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        &__image
+          width: 160%
+          margin: -8% 0px 0px -24%
+      &__info-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 16px 16px 0 16px
+        &__city
+          font-family: Roboto
+          font-style: normal
+          font-weight: bold
+          line-height: 20px
+          font-size: 16px
+          color: #5B5B5C
+          margin: 0
+        &__price
+          font-family: Roboto
+          font-style: normal
+          font-weight: normal
+          line-height: normal
+          font-size: 14px
+          color: #00BAE8
+          margin: 0
+      &__country-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 0 16px
+        &__country
+          font-family: Roboto
+          font-style: normal
+          font-weight: 500
+          line-height: 20px
+          font-size: 12px
+          color: #A0B0B9
+          text-transform: uppercase
+          margin-top: 2px
+        &__date
+          font-family: Roboto
+          font-style: normal
+          font-weight: 500
+          line-height: 20px
+          font-size: 12px
+          text-align: right
+          margin-top: 2px
+          color: #A0B0B9
