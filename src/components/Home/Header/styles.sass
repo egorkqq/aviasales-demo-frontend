@@ -1,0 +1,90 @@
+.header
+  background: linear-gradient(121.89deg, #00B0DE 0.36%, #01AEDC 4.04%, #02ABDB 7.77%, #02ABDB 11.48%, #02ABDB 11.7%, #196EBD 100%)
+  min-height: 100vh
+  padding-top: 12px
+  &__text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    font-size: 20px
+    color: #FFFFFF
+    margin: 50px auto 16px auto
+  &__search-filters
+    &__from-city
+      border-radius: 2px
+      background: #FFFFFF url('./SearchFilters/arrow.svg') no-repeat 95% 48%
+      padding: 16px
+      margin: 2px 0
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 60%
+      &__airport-name
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        line-height: 20px
+        font-size: 16px
+        text-align: center
+        color: #A0B0B9
+        padding-left: 16%
+    &__destination-city
+      background: #FFFFFF 
+      padding: 16px
+      margin: 2px 0
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 80%
+    &__dates-picker
+      display: flex
+      width: 100%
+      margin: 2px 0
+      &__wrapper
+        flex-basis: 50%
+        background: #FFFFFF url('./SearchFilters/calendar.svg') no-repeat 90% 48% 
+        padding: 16px
+        &:nth-child(2)
+          margin-left: 2px
+        &__input
+          border: white
+          font-family: Roboto
+          font-style: normal
+          font-weight: normal
+          line-height: 20px
+          font-size: 16px
+          width: 80%
+    &__passengers-picker
+      background: #FFFFFF 
+      padding: 16px
+      margin: 2px 0
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 100%
+  &__search-button
+    background: #FF9241 url('./SearchButton/aero.svg') no-repeat 80% 50%
+    border-radius: 4px
+    padding: 14px 88px 16px 55px
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    font-size: 24px
+    color: #FFFFFF
+    border: none
+    margin-top: 16px
+    width: 100%
