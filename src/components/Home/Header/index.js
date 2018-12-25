@@ -14,12 +14,14 @@ class Header extends Component {
             <div className="col-xs-12">
               <Logo alt="Aviasales" />
             </div>
-            <HeaderText />
-            <div className="col-xs-12">
-              <SearchFilters />
-            </div>
-            <div className="col-xs-12">
-              <SearchButton />
+            <div className="header__content-wrapper">
+              <HeaderText />
+              <div className="col-xs-12">
+                <SearchFilters />
+              </div>
+              <div className="col-xs-12">
+                <SearchButton />
+              </div>
             </div>
           </div>
         </div>
