@@ -1,0 +1,92 @@
+.best-prices
+  &__calendar
+    display: block
+    margin: 48px auto 0 auto
+    height: 60px
+    width: 60px
+    background: url('big-calendar.svg') no-repeat
+  &__text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: 24px
+    font-size: 18px
+    text-align: center
+    color: #4A4A4A
+  &__deal-cards
+    margin-top: 40px
+    &__card 
+      display: flex
+      flex-direction: column
+      padding-bottom: 24px
+      border-bottom: dashed 1px #AFBEC6
+      margin-top: 24px
+      &:nth-child(3)
+        border-bottom: none
+      &__from-wrapper
+        display: flex
+        justify-content: flex-start
+        &__flag
+          width: 30px
+          height: 30px
+          align-self: center
+        &__info-wrapper
+          display: flex
+          flex-direction: column
+          margin-left: 12px
+          justify-content: center
+        &__city-name
+          font-family: Roboto
+          font-style: normal
+          font-weight: bold
+          line-height: 32px
+          font-size: 22px
+          color: #5B5B5C
+          margin: 0
+        &__country-name
+          font-family: Roboto
+          font-style: normal
+          font-weight: 500
+          line-height: 20px
+          color: #A0B0B9
+          font-size: 12px
+          text-transform: uppercase
+          margin-bottom: 8px
+      &__destinations
+          &__destination
+            display: flex
+            justify-content: space-between
+            margin-top: 16px
+            width: 100%
+            &__city-name              
+              font-family: Roboto
+              font-style: normal
+              font-weight: normal
+              line-height: 20px
+              font-size: 16px
+              color: #4A4A4A
+            &__price
+              font-family: Roboto
+              font-style: normal
+              font-weight: normal
+              line-height: 20px
+              font-size: 16px
+              color: #00BAE8
+  &__sub-text
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    line-height: 24px
+    font-size: 16px
+    text-align: center
+    color: #4A4A4A
+    margin-top: 16px
+  &__disclaimer
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    line-height: 20px
+    font-size: 14px
+    text-align: center
+    color: #A0B0B9
+    margin-top: 24px
