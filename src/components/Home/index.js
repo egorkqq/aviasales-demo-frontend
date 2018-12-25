@@ -5,6 +5,7 @@ import PopularWays from "./PopularWays";
 import BestPrices from "./BestPrices";
 import SpecialOffers from "./SpecialOffers";
 import Articles from "./Articles";
+import Footer from "./Footer";
 
 class Home extends Component {
   state = {};
@@ -18,6 +19,7 @@ class Home extends Component {
           <SpecialOffers />
           <Articles />
         </main>
+        <Footer />
       </Fragment>
     );
   }
