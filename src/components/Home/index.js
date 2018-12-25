@@ -3,6 +3,9 @@ import Header from "./Header";
 import "flexboxgrid2";
 import PopularWays from "./PopularWays";
 import BestPrices from "./BestPrices";
+import SpecialOffers from "./SpecialOffers";
+import Articles from "./Articles";
+
 class Home extends Component {
   state = {};
   render() {
@@ -12,6 +15,8 @@ class Home extends Component {
         <main>
           <PopularWays />
           <BestPrices />
+          <SpecialOffers />
+          <Articles />
         </main>
       </Fragment>
     );
