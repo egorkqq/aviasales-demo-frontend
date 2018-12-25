@@ -8,6 +8,7 @@ const FromCity = () => {
           type="text"
           className="header__search-filters__from-city__input"
           value="Москва"
+          readOnly
         />
         <span className="header__search-filters__from-city__airport-name">
           MOW

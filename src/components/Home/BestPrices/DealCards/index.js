@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import deals from "./deals.js";
-console.log(deals);
 const Card = ({ flag, name, country, offers }) => {
   return (
     <div className="best-prices__deal-cards__card">

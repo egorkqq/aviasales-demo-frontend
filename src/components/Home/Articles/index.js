@@ -25,8 +25,8 @@ class Articles extends Component {
       <div className="articles">
         <div className="container">
           {articles.map(el => {
-            const { text, icon, title } = el;
-            return <Article text={text} icon={icon} title={title} />;
+            const { text, icon, title, id } = el;
+            return <Article key={id} text={text} icon={icon} title={title} />;
           })}
         </div>
       </div>

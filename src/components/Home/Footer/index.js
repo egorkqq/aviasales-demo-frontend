@@ -13,7 +13,7 @@ export default class Footer extends Component {
     return (
       <footer className="footer">
         <div className="footer__mobile-app">
-          <div class="container">
+          <div className="container">
             <h2 className="footer__mobile-app__text">
               Скачай мобильное приложение Aviasales.ru
             </h2>
