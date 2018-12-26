@@ -6,6 +6,7 @@ import BestPrices from "./BestPrices";
 import SpecialOffers from "./SpecialOffers";
 import Articles from "./Articles";
 import Footer from "./Footer";
+import Subscription from "./SubscriptionBlock";
 
 class Home extends Component {
   state = {};
@@ -16,6 +17,7 @@ class Home extends Component {
         <main>
           <PopularWays />
           <BestPrices />
+          <Subscription />
           <SpecialOffers />
           <Articles />
         </main>

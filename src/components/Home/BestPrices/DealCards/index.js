@@ -45,16 +45,16 @@ class DealCards extends Component {
     const cards = deals.map(el => {
       const { id, icon, name, country, offers } = el;
       return (
-        <Card
-          key={id}
-          flag={icon}
-          name={name}
-          country={country}
-          offers={offers}
-        />
+        <div key={id} className="col-xs-12 col-md-offset-1 col-md-10 ">
+          <Card flag={icon} name={name} country={country} offers={offers} />
+        </div>
       );
     });
-    return <div className="best-prices__deal-cards">{cards}</div>;
+    return (
+      <div className="best-prices__deal-cards">
+        <div className="row">{cards}</div>
+      </div>
+    );
   }
 }
 

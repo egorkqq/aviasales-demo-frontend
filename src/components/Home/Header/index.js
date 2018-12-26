@@ -12,17 +12,18 @@ class Header extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <Logo alt="Aviasales" />
-            </div>
-            <div className="header__content-wrapper">
-              <HeaderText />
-              <div className="col-xs-12">
-                <SearchFilters />
-              </div>
-              <div className="col-xs-12">
-                <SearchButton />
+              <div className="header__logo-wrapper">
+                <Logo alt="Aviasales" />{" "}
+                <span className="header__company-name">aviasales</span>
               </div>
             </div>
+
+            <HeaderText />
+            <div className="col-xs-12 col-md-offset-1 col-md-10">
+              <SearchFilters />
+            </div>
+
+            <SearchButton />
           </div>
         </div>
       </header>

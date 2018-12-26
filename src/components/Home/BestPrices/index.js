@@ -12,7 +12,9 @@ class BestPrices extends Component {
           <h2 className="best-prices__text">
             Лучшие цены на авиабилеты за последний месяц
           </h2>
+
           <DealCards />
+
           <h4 className="best-prices__sub-text">
             Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220
             стран мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и

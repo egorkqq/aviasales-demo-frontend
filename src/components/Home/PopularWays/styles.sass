@@ -1,9 +1,12 @@
+@import "../../global.sass"
 .popular-ways
   &__compass
     background: url('./compass.svg') no-repeat
     width: 64px
     height: 64px
     margin: 40px auto 24px auto
+    +tablet
+      margin: 56px auto 20px auto
   &__text
     font-family: Roboto
     font-style: normal
@@ -12,6 +15,9 @@
     font-size: 18px
     text-align: center
     color: #4A4A4A
+    +tablet
+      line-height: 36px
+      font-size: 24px
     &__current-city
       color: #00ACE2
       &__edit
@@ -24,6 +30,8 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
+    +tablet
+      flex-wrap: nowrap
     &__category
       
       margin: 0 8px
@@ -56,24 +64,46 @@
         border-bottom: 1px solid #00ACE2
   &__cards
     margin-top: 24px
+    +tablet
+      margin-top: 56px
     &__card
       background: #FFFFFF
       box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12)
       border-radius: 8px
       margin-top: 12px
+      position: relative
+      +tablet
+        margin-top: 24px
+        position: relative
       &__image-wrapper
         overflow: hidden
         height: 140px
         border-top-left-radius: 8px
         border-top-right-radius: 8px
+        +tablet
+          height: 212px
         &__image
           width: 160%
           margin: -8% 0px 0px -24%
+          +tablet
+            width: 100%
+            margin: 0
+      &__flag
+        display: none
+        +tablet
+          display: block
+          position: absolute
+          width: 50px
+          height: 50px
+          left: 15px
+          bottom: 22px
       &__info-wrapper
         display: flex
         flex-direction: row
         justify-content: space-between
         margin: 16px 16px 0 16px
+        +tablet
+          margin: 12px 16px 0px 72px
         &__city
           font-family: Roboto
           font-style: normal
@@ -82,6 +112,9 @@
           font-size: 16px
           color: #5B5B5C
           margin: 0
+          +tablet
+            line-height: 32px
+            font-size: 22px
         &__price
           font-family: Roboto
           font-style: normal
@@ -90,11 +123,16 @@
           font-size: 14px
           color: #00BAE8
           margin: 0
+          +tablet
+            line-height: 32px
+            font-size: 22px
       &__country-wrapper
         display: flex
         flex-direction: row
         justify-content: space-between
         margin: 0 16px
+        +tablet
+          margin: 0px 16px 16px 72px
         &__country
           font-family: Roboto
           font-style: normal

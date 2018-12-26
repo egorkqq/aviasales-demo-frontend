@@ -1,3 +1,4 @@
+@import "../../global.sass"
 .best-prices
   &__calendar
     display: block
@@ -5,6 +6,8 @@
     height: 60px
     width: 60px
     background: url('big-calendar.svg') no-repeat
+    +tablet
+      margin-top: 80px
   &__text
     font-family: Roboto
     font-style: normal
@@ -13,8 +16,14 @@
     font-size: 18px
     text-align: center
     color: #4A4A4A
+    margin-top: 20px
+    +tablet
+      line-height: 36px
+      font-size: 24px
   &__deal-cards
     margin-top: 40px
+    +tablet
+      margin-top: 60px
     &__card 
       display: flex
       flex-direction: column
@@ -27,9 +36,9 @@
         display: flex
         justify-content: flex-start
         &__flag
-          width: 30px
-          height: 30px
-          align-self: center
+          width: 50px
+          height: 50px
+          
         &__info-wrapper
           display: flex
           flex-direction: column
@@ -81,6 +90,8 @@
     text-align: center
     color: #4A4A4A
     margin-top: 16px
+    +tablet
+      line-height: 26px
   &__disclaimer
     font-family: Roboto
     font-style: normal

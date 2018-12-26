@@ -1,7 +1,11 @@
+@import "../../global.sass"
 .special-offers
   background: linear-gradient(107.04deg, #00B0DE 0%, #196EBD 100%)
   padding-top: 16px
   padding-bottom: 24px
+  +tablet
+    padding-top: 24px
+    margin-top: 56px
   &__text
     font-family: Roboto
     font-style: normal
@@ -43,6 +47,8 @@
           justify-content: space-between
           &__logo
             height: 30px
+            +tablet
+              height: 25px
           &__wrapper
             display: flex
             flex-direction: column
@@ -98,6 +104,8 @@
     text-decoration-line: underline
     color: #FFFFFF
     margin: 32px 0 8px 0
+    +tablet
+      margin: 24px 0 0px 0
   &__disclaimer
     display: block
     font-family: Roboto
@@ -107,4 +115,13 @@
     font-size: 16px
     text-align: center
     color: #FFFFFF
+    +tablet
+      margin: 24px 0 0px 0
+  &_wrapper
+    display: flex
+    flex-direction: column
+    +tablet
+      flex-direction: row
+      justify-content: space-between
+      
     

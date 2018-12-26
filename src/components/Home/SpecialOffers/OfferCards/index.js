@@ -45,20 +45,24 @@ class OfferCards extends Component {
   render() {
     return (
       <div className="special-offers__cards">
-        {offers.map(el => {
-          const { id, title, text, logo, timeLeft, price, miniLogo } = el;
-          return (
-            <Card
-              text={text}
-              key={id}
-              title={title}
-              logo={logo}
-              timeLeft={timeLeft}
-              price={price}
-              miniLogo={miniLogo}
-            />
-          );
-        })}
+        <div className="row">
+          {offers.map(el => {
+            const { id, title, text, logo, timeLeft, price, miniLogo } = el;
+            return (
+              <div className="col-md-4">
+                <Card
+                  text={text}
+                  key={id}
+                  title={title}
+                  logo={logo}
+                  timeLeft={timeLeft}
+                  price={price}
+                  miniLogo={miniLogo}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

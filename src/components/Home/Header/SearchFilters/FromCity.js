@@ -2,8 +2,8 @@ import React from "react";
 
 const FromCity = () => {
   return (
-    <label>
-      <div className="header__search-filters__from-city">
+    <div className="header__search-filters__from-city">
+      <label>
         <input
           type="text"
           className="header__search-filters__from-city__input"
@@ -13,8 +13,8 @@ const FromCity = () => {
         <span className="header__search-filters__from-city__airport-name">
           MOW
         </span>
-      </div>
-    </label>
+      </label>
+    </div>
   );
 };
 

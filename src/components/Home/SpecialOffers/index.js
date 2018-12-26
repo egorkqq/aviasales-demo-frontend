@@ -12,12 +12,14 @@ class SpecialOffers extends Component {
             Спецпредложения на авиабилеты
           </h2>
           <OfferCards />
-          <Link className="special-offers__link" to="/">
-            Смотреть все спецпредложения
-          </Link>
-          <span className="special-offers__disclaimer">
-            * средняя цена по направлению
-          </span>
+          <div className="special-offers_wrapper">
+            <Link className="special-offers__link" to="/">
+              Смотреть все спецпредложения
+            </Link>
+            <span className="special-offers__disclaimer">
+              * средняя цена по направлению
+            </span>
+          </div>
         </div>
       </div>
     );

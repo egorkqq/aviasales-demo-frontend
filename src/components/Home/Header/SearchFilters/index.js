@@ -9,10 +9,14 @@ class SearchFilters extends Component {
   render() {
     return (
       <section className="header__search-filters">
-        <FromCity />
-        <DestinationCity />
-        <DatesPicker />
-        <PassengersPicker />
+        <div className="header__search-filters__wrapper-top">
+          <FromCity />
+          <DestinationCity />
+        </div>
+        <div className="header__search-filters__wrapper-top">
+          <DatesPicker />
+          <PassengersPicker />
+        </div>
       </section>
     );
   }

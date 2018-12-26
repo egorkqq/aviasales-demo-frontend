@@ -1,9 +1,15 @@
+@import "../../global.sass"
 .footer
   &__mobile-app
     position: relative
     padding-top: 24px
     padding-bottom: 48px
     background: linear-gradient(132.6deg, #00B0DE 0%, #196EBD 100%)
+    +tablet
+      padding-top: 48px
+      padding-left: 264px
+      padding-right: 72px
+      margin-top: 48px
     &__text
       font-family: Roboto
       font-style: normal
@@ -12,6 +18,12 @@
       font-size: 24px
       text-align: center
       color: #FFFFFF
+      margin-bottom: 16px
+      +tablet
+        font-size: 32px
+        line-height: 40px
+        text-align: left
+        margin-top: 0
     &__rating
       font-family: Roboto
       font-style: normal
@@ -21,16 +33,24 @@
       color: #FFFFFF
       text-align: center
       margin-top: 16px
+      +tablet
+        text-align: left
     &__iphone-pic
       position: absolute
       width: 160px
       bottom: 0px
       left: 0px
+      +tablet
+        width: 236px
     &__links
       display: flex
       flex-direction: column
       margin: 56px 8px 0px 55%
-
+      +tablet
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        margin: 0
       &__link
         font-family: Roboto
         font-style: normal
@@ -41,6 +61,14 @@
         margin-top: 16px
         display: flex
         text-decoration: none
+        +tablet
+          padding-right: 16px
+          border-right: 1px solid 
+          margin-left: 10px
+          &:nth-child(3)
+            border-right: 0
+          &:nth-child(1)
+            margin-left: 0
         &__img
           align-self: center
           padding-right: 8px
@@ -84,6 +112,9 @@
       display: flex
       flex-wrap: wrap
       width: 80%
+      +tablet
+        justify-content: space-between
+        width: 90%
       &__link
         font-family: Roboto
         font-style: normal
@@ -99,6 +130,10 @@
       flex-wrap: wrap
       justify-content: flex-start
       margin-top: 16px
+      +tablet
+        flex-wrap: nowrap
+        width: 80%
+        justify-content: space-between
       &__link
         flex-basis: 27%
         display: flex
@@ -123,11 +158,17 @@
       text-align: center
       color: #5B5B5C
       margin-top: 24px
+      +tablet
+        text-align: left
     &__buttons
       margin: 0 auto
       display: flex
       flex-direction: column
       align-items: center
+      +tablet
+        flex-direction: row
       &__button
         margin-top: 8px
         width: 120px
+        +tablet
+          margin-right: 8px
