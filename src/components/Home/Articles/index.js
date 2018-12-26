@@ -24,10 +24,12 @@ class Articles extends Component {
     return (
       <div className="articles">
         <div className="container">
-          {articles.map(el => {
-            const { text, icon, title, id } = el;
-            return <Article key={id} text={text} icon={icon} title={title} />;
-          })}
+          <div className="col-xl-offset-1 col-xl-10 col-xl-offset-1">
+            {articles.map(el => {
+              const { text, icon, title, id } = el;
+              return <Article key={id} text={text} icon={icon} title={title} />;
+            })}
+          </div>
         </div>
       </div>
     );

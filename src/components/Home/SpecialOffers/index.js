@@ -8,17 +8,21 @@ class SpecialOffers extends Component {
     return (
       <div className="special-offers">
         <div className="container">
-          <h2 className="special-offers__text">
-            Спецпредложения на авиабилеты
-          </h2>
+          <div className="col-xl-offset-1">
+            <h2 className="special-offers__text">
+              Спецпредложения на авиабилеты
+            </h2>
+          </div>
           <OfferCards />
-          <div className="special-offers_wrapper">
-            <Link className="special-offers__link" to="/">
-              Смотреть все спецпредложения
-            </Link>
-            <span className="special-offers__disclaimer">
-              * средняя цена по направлению
-            </span>
+          <div className="col-xl-offset-1 col-xl-10 col-xl-offset-1">
+            <div className="special-offers_wrapper">
+              <Link className="special-offers__link" to="/">
+                Смотреть все спецпредложения
+              </Link>
+              <span className="special-offers__disclaimer">
+                * средняя цена по направлению
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -32,6 +32,7 @@
     justify-content: center
     +tablet
       flex-wrap: nowrap
+      margin-top: 56px
     &__category
       
       margin: 0 8px
@@ -88,6 +89,9 @@
           +tablet
             width: 100%
             margin: 0
+          +desktop
+            width: 160%
+            margin: -8% 0px 0px -24%
       &__flag
         display: none
         +tablet
@@ -112,9 +116,15 @@
           font-size: 16px
           color: #5B5B5C
           margin: 0
+          
           +tablet
             line-height: 32px
             font-size: 22px
+          +desktop
+            overflow: hidden
+            height: 32px
+            text-overflow: ellipsis
+            white-space: nowrap
         &__price
           font-family: Roboto
           font-style: normal
@@ -126,6 +136,11 @@
           +tablet
             line-height: 32px
             font-size: 22px
+          +desktop
+            overflow: hidden
+            height: 32px
+            text-overflow: ellipsis
+            white-space: nowrap
       &__country-wrapper
         display: flex
         flex-direction: row

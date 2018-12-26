@@ -46,7 +46,7 @@ class Categories extends Component {
       );
     });
     return (
-      <div className="col-xs-12 col-md-offset-1 col-md-10 col-md-offset-1">
+      <div className="col-xs-12 col-md-offset-1 col-md-10 col-md-offset-1 col-xl-offset-3 col-xl-6">
         <div className="popular-ways__categories">{elements}</div>
       </div>
     );

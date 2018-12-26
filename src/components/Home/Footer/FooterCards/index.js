@@ -4,7 +4,7 @@ import { cards } from "./cards.js";
 let counter = 1;
 const Card = ({ title, destinations, withoutLink }) => {
   return (
-    <div className="col-xs-6 col-md-3">
+    <div className="col-xs-6 col-md-3 col-xl-2">
       <div className="footer__footer-cards__card">
         <h6 className="footer__footer-cards__card__title">{title}</h6>
         {destinations.map(el => {

@@ -12,44 +12,48 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <div className="footer__mobile-app">
-          <div className="container">
-            <h2 className="footer__mobile-app__text">
-              Скачай мобильное приложение Aviasales.ru
-            </h2>
-            <p className="footer__mobile-app__rating">
-              <img src={rating} alt="" /> Более 103 000 оценок
-            </p>
-            <img
-              className="footer__mobile-app__iphone-pic"
-              src={iphonePic}
-              alt=""
-            />
-            <div className="footer__mobile-app__links">
-              <Link to="/" className="footer__mobile-app__links__link">
+        <div className="footer__mobile-app-bg">
+          <div className="col-xl-offset-1 col-xl-10 col-xl-offset-1">
+            <div className="footer__mobile-app">
+              <div className="container">
+                <h2 className="footer__mobile-app__text">
+                  Скачай мобильное приложение Aviasales.ru
+                </h2>
+                <p className="footer__mobile-app__rating">
+                  <img src={rating} alt="" /> Более 103 000 оценок
+                </p>
                 <img
-                  className="footer__mobile-app__links__link__img"
-                  src={apple}
+                  className="footer__mobile-app__iphone-pic"
+                  src={iphonePic}
                   alt=""
-                />{" "}
-                iPhone или iPad
-              </Link>
-              <Link to="/" className="footer__mobile-app__links__link">
-                <img
-                  className="footer__mobile-app__links__link__img"
-                  src={andro}
-                  alt=""
-                />{" "}
-                Android
-              </Link>
-              <Link to="/" className="footer__mobile-app__links__link">
-                <img
-                  className="footer__mobile-app__links__link__img"
-                  src={wf}
-                  alt=""
-                />{" "}
-                Windows Phone
-              </Link>
+                />
+                <div className="footer__mobile-app__links">
+                  <Link to="/" className="footer__mobile-app__links__link">
+                    <img
+                      className="footer__mobile-app__links__link__img"
+                      src={apple}
+                      alt=""
+                    />{" "}
+                    iPhone или iPad
+                  </Link>
+                  <Link to="/" className="footer__mobile-app__links__link">
+                    <img
+                      className="footer__mobile-app__links__link__img"
+                      src={andro}
+                      alt=""
+                    />{" "}
+                    Android
+                  </Link>
+                  <Link to="/" className="footer__mobile-app__links__link">
+                    <img
+                      className="footer__mobile-app__links__link__img"
+                      src={wf}
+                      alt=""
+                    />{" "}
+                    Windows Phone
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

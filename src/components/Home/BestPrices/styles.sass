@@ -24,12 +24,19 @@
     margin-top: 40px
     +tablet
       margin-top: 60px
+    +desktop
+      display: flex
+      flex-direction: row
+      justify-content: space-around
     &__card 
       display: flex
       flex-direction: column
       padding-bottom: 24px
       border-bottom: dashed 1px #AFBEC6
       margin-top: 24px
+      +desktop
+        border-bottom: none
+        flex-basis: 30.5%
       &:nth-child(3)
         border-bottom: none
       &__from-wrapper
@@ -92,6 +99,8 @@
     margin-top: 16px
     +tablet
       line-height: 26px
+    +desktop
+      margin-top: 80px
   &__disclaimer
     font-family: Roboto
     font-style: normal

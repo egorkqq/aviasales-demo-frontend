@@ -11,7 +11,9 @@ class Subscription extends Component {
           Дешевые авиабилеты от крупнейших авиакомпаний и агентств
         </h2>
         <div className="container">
-          <Carousel />
+          <div className="col-xl-offset-1 col-xl-10">
+            <Carousel />
+          </div>
           <div className="subscription__line" />
           <Follow />
         </div>

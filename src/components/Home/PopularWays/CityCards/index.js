@@ -33,10 +33,16 @@ function Card({ title, image, price, date, country, flag }) {
 class CityCards extends Component {
   state = {};
   render() {
+    let counter = 0;
     const cards = destinations.map(el => {
+      counter++;
+      const classes =
+        counter % 2
+          ? "col-xs-12 col-md-offset-1 col-md-10 col-xl-5"
+          : "col-xs-12 col-md-offset-1 col-xl-offset-0 col-md-10 col-xl-5";
       const { id, image, title, price, country, date, flag } = el;
       return (
-        <div key={id} className="col-xs-12 col-md-offset-1 col-md-10  col-xl-5">
+        <div key={id} className={classes}>
           <Card
             image={image}
             title={title}
@@ -48,7 +54,11 @@ class CityCards extends Component {
         </div>
       );
     });
-    return <div className="popular-ways__cards">{cards}</div>;
+    return (
+      <div className="popular-ways__cards">
+        <div className="row">{cards}</div>
+      </div>
+    );
   }
 }
 

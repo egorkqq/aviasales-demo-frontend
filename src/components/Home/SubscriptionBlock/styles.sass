@@ -59,6 +59,9 @@
   &__socials
     text-align: center
     margin: 24px auto
+    +desktop
+      display: flex
+      align-items: center
     &__img
       width: 36px
       background: #9B9B9B
@@ -97,3 +100,16 @@
       border: none
       z-index: 2
       padding: 8px 20px
+  &__wrapper
+    +desktop
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &__follow-wrapper
+    +desktop
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-left: 120px
+
+      
