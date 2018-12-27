@@ -16,9 +16,12 @@
     background: url(./content/line.svg)
   &__slider
     height: 236px
-    width:
+    +desktop
+      height: 188px
     &__slide
       height: 188px
+      +desktop
+        height: 100px
       &__wrapper
         width: 550px
         margin: 0 auto
@@ -26,9 +29,14 @@
         flex-wrap: wrap
         justify-content: space-around
         align-content: center
+        +desktop
+          flex-wrap: nowrap
+          align-items: center
       &__img
         height: 50px
         margin: 32px 32px 0 0
+        +desktop
+          height: 40px
     .slick-next 
       right: 0
       background: url('./content/next.svg')
