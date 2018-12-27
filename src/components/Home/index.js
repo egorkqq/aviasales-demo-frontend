@@ -21,7 +21,6 @@ class Home extends Component {
           <SpecialOffers />
           <Articles />
         </main>
-        <Footer />
       </Fragment>
     );
   }
