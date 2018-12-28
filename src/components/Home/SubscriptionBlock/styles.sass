@@ -1,0 +1,123 @@
+@import "../../global.sass"
+.subscription
+  +mobile
+    display: none
+  &__text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: 40px
+    font-size: 32px
+    text-align: center
+    color: #5C5C5C
+    margin-top: 80px
+  &__line
+    height: 7px
+    background: url(./content/line.svg)
+  &__slider
+    height: 236px
+    +desktop
+      height: 188px
+    &__slide
+      height: 188px
+      +desktop
+        height: 100px
+      &__wrapper
+        width: 550px
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-content: center
+        +desktop
+          flex-wrap: nowrap
+          align-items: center
+      &__img
+        height: 50px
+        margin: 32px 32px 0 0
+        +desktop
+          height: 40px
+    .slick-next 
+      right: 0
+      background: url('./content/next.svg')
+      width: 18px
+      height: 32px
+    .slick-prev
+      left: 0
+      background: url('./content/prev.svg')
+      width: 18px
+      height: 32px
+  &__subtext
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    line-height: 20px
+    font-size: 16px
+    text-align: center
+    color: #5C5C5C
+    margin-top: 24px
+  &__subsubtext
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    line-height: 22px
+    font-size: 16px
+    text-align: center
+    color: #5C5C5C  
+  &__socials
+    text-align: center
+    margin: 24px auto
+    +desktop
+      display: flex
+      align-items: center
+    &__img
+      width: 36px
+      background: #9B9B9B
+      border: 1px solid #979797
+      border-radius: 50px
+      margin-right: 6px
+  &__form
+    display: flex
+    justify-content: center
+    align-items: stretch
+    &__label
+      display: block
+      padding: 8px
+      background: #FFFFFF
+      border: 1px solid #A0B0B9
+      border-radius: 2px
+    &__input
+      border: none
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      line-height: 20px
+      font-size: 16px
+      color: #A0B0B9
+    &__button
+      background: #FF8E41
+      border-radius: 2px
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      line-height: 20px
+      font-size: 16px
+      text-align: center
+      color: #FFFFFF
+      margin-left: -5px
+      border: none
+      z-index: 2
+      padding: 8px 20px
+  &__wrapper
+    +desktop
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &__follow-wrapper
+    +desktop
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-left: 120px
+
+      
