@@ -41,25 +41,25 @@ class Ticket extends Component {
           </div>
           <div className="results__ticket__info__flight-wrapper">
             <div className="results__ticket__info__flight-wrapper__wrapper-from">
-              <div className="results__ticket__info__flight-wrapper__wrapper-from__time">
+              <div className="results__ticket__info__flight-wrapper__time">
                 <img
                   src={fixingButton}
                   alt=""
-                  className="results_ticket__info__flight-wrapper__wrapper-from__time__icon"
+                  className="results__ticket__info__flight-wrapper__time__icon"
                 />
                 00:05
               </div>
-              <div className="results__ticket__info__flight-wrapper__wrapper-from__city">
+              <div className="results__ticket__info__flight-wrapper__city">
                 Москва
               </div>
-              <div className="results__ticket__info__flight-wrapper__wrapper-from__date">
+              <div className="results__ticket__info__flight-wrapper__date">
                 24 фев 2018, Сб
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-way">
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length">
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air" />
-                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__totalTime">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__total-time">
                   Всего: 5ч
                 </div>
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air-back" />
@@ -70,27 +70,77 @@ class Ticket extends Component {
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-line__circle" />
               </div>
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports">
-                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-from">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
                   VCO
                 </div>
-                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-to">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
                   BCN
                 </div>
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-to">
-              <div className="results__ticket__info__flight-wrapper__wrapper-to__time">
+              <div className="results__ticket__info__flight-wrapper__time">
                 03:05
               </div>
-              <div className="results__ticket__info__flight-wrapper__wrapper-to__city">
+              <div className="results__ticket__info__flight-wrapper__city">
                 Барселона
               </div>
-              <div className="results__ticket__info__flight-wrapper__wrapper-to__date">
+              <div className="results__ticket__info__flight-wrapper__date">
                 24 фев 2018, Сб
               </div>
             </div>
           </div>
-          <div className="results__ticket__info__flight-wrapper" />
+          <div className="results__ticket__info__flight-wrapper">
+            <div className="results__ticket__info__flight-wrapper__wrapper-from">
+              <div className="results__ticket__info__flight-wrapper__time">
+                <img
+                  src={fixingButton}
+                  alt=""
+                  className="results__ticket__info__flight-wrapper__time__icon"
+                />
+                00:05
+              </div>
+              <div className="results__ticket__info__flight-wrapper__city">
+                Москва
+              </div>
+              <div className="results__ticket__info__flight-wrapper__date">
+                24 фев 2018, Сб
+              </div>
+            </div>
+            <div className="results__ticket__info__flight-wrapper__wrapper-way">
+              <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air" />
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__total-time">
+                  Всего: 5ч
+                </div>
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air-back" />
+              </div>
+              <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-line">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-line__circle" />
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-line__line" />
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-line__circle" />
+              </div>
+              <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports">
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
+                  VCO
+                </div>
+                <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
+                  BCN
+                </div>
+              </div>
+            </div>
+            <div className="results__ticket__info__flight-wrapper__wrapper-to">
+              <div className="results__ticket__info__flight-wrapper__time">
+                03:05
+              </div>
+              <div className="results__ticket__info__flight-wrapper__city">
+                Барселона
+              </div>
+              <div className="results__ticket__info__flight-wrapper__date">
+                24 фев 2018, Сб
+              </div>
+            </div>
+          </div>
         </div>
         <div className="results__ticket__open">
           <img src="" alt="" className="results__ticket__open-icon" />
