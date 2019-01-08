@@ -1,7 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Results from "./Results";
+import Filters from "./Filters";
+import Header from "./Header";
 
 const Search = () => {
-  return <div>search</div>;
+  return (
+    <Fragment>
+      <Header />
+      <Filters />
+      <Results />
+    </Fragment>
+  );
 };
 
 export default Search;
