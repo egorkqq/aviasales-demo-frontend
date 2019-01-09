@@ -11,6 +11,9 @@ class Results extends Component {
           {tickets.map((el, index) => {
             return <Ticket data={el} key={index} />;
           })}
+          <button className="results__more-tickets">
+            Показать еще 10 билетов!
+          </button>
         </div>
       </section>
     );

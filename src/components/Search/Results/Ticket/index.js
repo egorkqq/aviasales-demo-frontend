@@ -44,9 +44,38 @@ class Ticket extends Component {
             </span>
           </button>
           <div className="results__ticket__buy__wrapper-company-name">
-            на {offers[0].airlines}
+            на {offers[0].company}
           </div>
-          <div className="results__ticket__buy__wrapper-list" />
+          <div className="results__ticket__buy__wrapper-list">
+            {offers.length > 1
+              ? offers.map((offer, index) => {
+                  if (index === 0 || index >= 3) return null; // нужно узнать, считается ли это костылем
+                  return (
+                    <div key={index} className="results__ticket__buy__wrapper">
+                      <div className="results__ticket__buy__wrapper-list__offer">
+                        <div className="results__ticket__buy__wrapper-list__offer__company">
+                          {offer.company}
+                        </div>
+                        <div className="results__ticket__buy__wrapper-list__offer__price">
+                          <FormattedNumber
+                            value={offer.price}
+                            style={`currency`}
+                            currency="RUB"
+                            minimumFractionDigits={0}
+                            maximumFractionDigits={0}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })
+              : null}
+            {offers.length > 3 ? (
+              <div className="results__ticket__buy__wrapper-list__show-more">
+                + Еще {offers.length - 3} предложения
+              </div>
+            ) : null}
+          </div>
         </div>
         <div className="results__ticket__info">
           <div className="results__ticket__info__top-wrapper">

@@ -31,7 +31,7 @@ const tickets = [
     },
     isCharter: true,
     airlines: [rossia, redWings],
-    offers: [{ airlines: "Clickavia", price: 18899 }],
+    offers: [{ company: "Clickavia", price: 11899 }],
     baggage: {
       mini: 5,
       full: 15
@@ -67,7 +67,11 @@ const tickets = [
     },
     isCharter: false,
     airlines: [redWings],
-    offers: [{ airlines: "Clickavia", price: 12899 }],
+    offers: [
+      { company: "Clickavia", price: 12899 },
+      { company: "Тинькофф", price: 15899 },
+      { company: "OZON.Travel", price: 19899 }
+    ],
     baggage: {
       mini: 5,
       full: 15
@@ -103,10 +107,56 @@ const tickets = [
     },
     isCharter: false,
     airlines: [redWings],
-    offers: [{ airlines: "Clickavia", price: 18899 }],
+    offers: [
+      { company: "Clickavia", price: 18899 },
+      { company: "OZON.Travel", price: 28899 }
+    ],
     baggage: {
       mini: 5,
       full: 15
+    }
+  },
+  {
+    //вместо айди теперь будем использовать аргумент индекс у функции мэп
+    outbound: {
+      origin: {
+        city: "Москва",
+        airport: "VKO",
+        dateTime: 1529430700
+      },
+      destination: {
+        city: "Барселона",
+        airport: "BCN",
+        dateTime: 1529441500
+      },
+      duration: 20000
+    },
+    back: {
+      origin: {
+        city: "Барселона",
+        airport: "BCN",
+        dateTime: 1520073300
+      },
+      destination: {
+        city: "Москва",
+        airport: "SVO",
+        dateTime: 1520097000
+      },
+      duration: 18500
+    },
+    isCharter: false,
+    airlines: [redWings],
+    offers: [
+      { company: "Clickavia", price: 18899 },
+      { company: "OZON.Travel", price: 19899 },
+      { company: "Тинькофф Трэвел", price: 20899 },
+      { company: "OZON.Travel", price: 28899 },
+      { company: "Clickavia", price: 18899 },
+      { company: "OZON.Travel", price: 28899 }
+    ],
+    baggage: {
+      mini: 5,
+      full: "X"
     }
   }
 ];
