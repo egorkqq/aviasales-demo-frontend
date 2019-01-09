@@ -1,27 +1,50 @@
 import React, { Component } from "react";
-import rossia from "./rossia.png";
 import fixingButton from "./fixing-button.svg";
+import { FormattedNumber } from "react-intl";
+import FormattedDuration from "react-intl-formatted-duration";
+import { format } from "date-fns";
+import ru from "date-fns/locale/ru";
 
 class Ticket extends Component {
   state = {};
   render() {
+    const {
+      outbound,
+      back,
+      isCharter,
+      airlines,
+      offers,
+      baggage
+    } = this.props.data;
+
     return (
       <div className="results__ticket">
         <div className="results__ticket__buy">
           <div className="results__ticket__buy__wrapper-baggage">
-            <div className="results__ticket__buy__wrapper-baggage__mini">5</div>
-            <div className="results__ticket__buy__wrapper-baggage__big">15</div>
+            <div className="results__ticket__buy__wrapper-baggage__mini">
+              {baggage.mini}
+            </div>
+            <div className="results__ticket__buy__wrapper-baggage__big">
+              {baggage.full}
+            </div>
           </div>
           <button className="results__ticket__buy__wrapper-button">
             <span className="results__ticket__buy__wrapper-button__buy">
               Купить
             </span>
             <span className="results__ticket__buy__wrapper-button__price">
-              за 3 331 Р
+              за{" "}
+              <FormattedNumber
+                value={offers[0].price}
+                style={`currency`}
+                currency="RUB"
+                minimumFractionDigits={0}
+                maximumFractionDigits={0}
+              />
             </span>
           </button>
           <div className="results__ticket__buy__wrapper-company-name">
-            на Clickavia
+            на {offers[0].airlines}
           </div>
           <div className="results__ticket__buy__wrapper-list" />
         </div>
@@ -29,14 +52,16 @@ class Ticket extends Component {
           <div className="results__ticket__info__top-wrapper">
             <div className="results__ticket__info__top-wrapper__logo-wrapper">
               <img
-                src={rossia}
+                src={airlines[0]}
                 alt=""
                 className="results__ticket__info__top-wrapper__logo-wrapper__image"
               />
             </div>
-            <div className="results__ticket__info__top-wrapper__is-charter">
-              Чартер
-            </div>
+            {isCharter ? (
+              <div className="results__ticket__info__top-wrapper__is-charter">
+                Чартер
+              </div>
+            ) : null}
             <div className="results__ticket__info__top-wrapper__share" />
           </div>
           <div className="results__ticket__info__flight-wrapper">
@@ -47,20 +72,28 @@ class Ticket extends Component {
                   alt=""
                   className="results__ticket__info__flight-wrapper__time__icon"
                 />
-                00:05
+                {format(outbound.origin.dateTime * 1000, "HH:mm", {
+                  locale: ru
+                })}
               </div>
               <div className="results__ticket__info__flight-wrapper__city">
-                Москва
+                {outbound.origin.city}
               </div>
               <div className="results__ticket__info__flight-wrapper__date">
-                24 фев 2018, Сб
+                {format(outbound.origin.dateTime * 1000, "DD MMM YYYY[, ] dd", {
+                  locale: ru
+                })}
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-way">
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length">
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air" />
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__total-time">
-                  Всего: 5ч
+                  Всего:{" "}
+                  <FormattedDuration
+                    seconds={outbound.duration}
+                    format="extra_short"
+                  />
                 </div>
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air-back" />
               </div>
@@ -71,22 +104,30 @@ class Ticket extends Component {
               </div>
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports">
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
-                  VCO
+                  {outbound.origin.airport}
                 </div>
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
-                  BCN
+                  {outbound.destination.airport}
                 </div>
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-to">
               <div className="results__ticket__info__flight-wrapper__time">
-                03:05
+                {format(outbound.destination.dateTime * 1000, "HH:mm", {
+                  locale: ru
+                })}
               </div>
               <div className="results__ticket__info__flight-wrapper__city">
-                Барселона
+                {outbound.destination.city}
               </div>
               <div className="results__ticket__info__flight-wrapper__date">
-                24 фев 2018, Сб
+                {format(
+                  outbound.destination.dateTime * 1000,
+                  "DD MMM YYYY[, ] dd",
+                  {
+                    locale: ru
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -98,20 +139,28 @@ class Ticket extends Component {
                   alt=""
                   className="results__ticket__info__flight-wrapper__time__icon"
                 />
-                00:05
+                {format(back.origin.dateTime * 1000, "HH:mm", {
+                  locale: ru
+                })}
               </div>
               <div className="results__ticket__info__flight-wrapper__city">
-                Москва
+                {back.origin.city}
               </div>
               <div className="results__ticket__info__flight-wrapper__date">
-                24 фев 2018, Сб
+                {format(back.origin.dateTime * 1000, "DD MMM YYYY[, ] dd", {
+                  locale: ru
+                })}
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-way">
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length">
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air" />
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__total-time">
-                  Всего: 5ч
+                  Всего:{" "}
+                  <FormattedDuration
+                    seconds={back.duration}
+                    format="extra_short"
+                  />
                 </div>
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-length__air-back" />
               </div>
@@ -122,28 +171,36 @@ class Ticket extends Component {
               </div>
               <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports">
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
-                  VCO
+                  {back.origin.airport}
                 </div>
                 <div className="results__ticket__info__flight-wrapper__wrapper-way__wrapper-airports__aero-name">
-                  BCN
+                  {back.destination.airport}
                 </div>
               </div>
             </div>
             <div className="results__ticket__info__flight-wrapper__wrapper-to">
               <div className="results__ticket__info__flight-wrapper__time">
-                03:05
+                {format(back.destination.dateTime * 1000, "HH:mm", {
+                  locale: ru
+                })}
               </div>
               <div className="results__ticket__info__flight-wrapper__city">
-                Барселона
+                {back.destination.city}
               </div>
               <div className="results__ticket__info__flight-wrapper__date">
-                24 фев 2018, Сб
+                {format(
+                  back.destination.dateTime * 1000,
+                  "DD MMM YYYY[, ] dd",
+                  {
+                    locale: ru
+                  }
+                )}
               </div>
             </div>
           </div>
         </div>
         <div className="results__ticket__open">
-          <img src="" alt="" className="results__ticket__open-icon" />
+          <div className="results__ticket__open-icon" />
         </div>
       </div>
     );
