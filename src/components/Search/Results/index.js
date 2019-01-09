@@ -6,7 +6,7 @@ class Results extends Component {
   render() {
     return (
       <section className="results">
-        <div className="container">
+        <div className="col-xs-12">
           <Ticket />
         </div>
       </section>
