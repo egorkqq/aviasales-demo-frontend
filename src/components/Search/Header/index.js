@@ -8,17 +8,24 @@ class Header extends Component {
     return (
       <header className="search-header">
         <div className="container">
-          <div className="col-md-12">
-            <div className="search-header__set-currency">RUB</div>
-            <div className="search-header__logo">
-              <img
-                className="search-header__logo__image"
-                src={logo}
-                alt="aviasales"
-              />
-              <span className="search-header__logo__title"> aviasales </span>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="search-header__wrapper">
+                <div className="search-header__set-currency">RUB</div>
+                <div className="search-header__logo">
+                  <img
+                    className="search-header__logo__image"
+                    src={logo}
+                    alt="aviasales"
+                  />
+                  <span className="search-header__logo__title">
+                    {" "}
+                    aviasales{" "}
+                  </span>
+                </div>
+                <SearchFilters />
+              </div>
             </div>
-            <SearchFilters />
           </div>
         </div>
       </header>
