@@ -2,11 +2,7 @@ import React from "react";
 
 const PassengersPicker = () => {
   return (
-    <div
-      style={{ borderBottomRightRadius: 0 }}
-      // вот за этот инлайн стиль извиняюсь, потом исправлю
-      className="header__search-filters__passengers-picker"
-    >
+    <div className="header-search__search-filters__passengers-picker">
       <label>
         <input
           className="header__search-filters__passengers-picker__input"

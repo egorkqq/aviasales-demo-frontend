@@ -8,13 +8,13 @@ class SearchFilters extends Component {
   state = {};
   render() {
     return (
-      <section className="header__search-filters">
+      <section className={this.props.className || "header__search-filters"}>
         <div className="header__search-filters__wrapper-top">
           <FromCity />
           <DestinationCity />
         </div>
         <div className="header__search-filters__wrapper-top">
-          <DatesPicker />
+          <DatesPicker className="header__search-filters__dates-picker fixer" />
           <PassengersPicker />
           <SearchButton />
         </div>

@@ -14,9 +14,9 @@ const Template = ({ placeholder }) => {
   );
 };
 
-const DatesPicker = () => {
+const DatesPicker = ({ className }) => {
   return (
-    <div className="header__search-filters__dates-picker">
+    <div className={className || "header__search-filters__dates-picker"}>
       <Template placeholder="Туда" />
       <Template placeholder="Обратно" />
     </div>

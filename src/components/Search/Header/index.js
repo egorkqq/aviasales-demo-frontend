@@ -23,7 +23,7 @@ class Header extends Component {
                     aviasales{" "}
                   </span>
                 </div>
-                <SearchFilters />
+                <SearchFilters className="header__search-filters modifier" />
               </div>
             </div>
           </div>
