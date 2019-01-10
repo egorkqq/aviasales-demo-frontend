@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from "react";
 import FilterWrapper from "./FilterWrapper";
+import Transfers from "./Transfers";
+import Aviacompanies from "./Aviacompanies";
 import "./styles.sass";
+import DepartureAndArrivals from "./DepartureAndArrivals";
 
 class Filter extends Component {
   state = {};
@@ -12,18 +15,16 @@ class Filter extends Component {
         </div>
         <section className="filters">
           <div className="filters__wrapper">
-            <FilterWrapper title={"Трансфер"}>
-              контент \n контентыч аазазвы азфыфвыывфы
+            <FilterWrapper title={"Пересадки"}>
+              <Transfers />
             </FilterWrapper>
-            <FilterWrapper title={"Трансфер"}>
-              контент \n контентыч аазазвы азфыфвыывфы
+            <FilterWrapper isOpened title={"Время вылета и прибытия"}>
+              <DepartureAndArrivals />
             </FilterWrapper>
-            <FilterWrapper isOpened title={"Трансфер"}>
-              контент \n контентыч аазазвы азфыфвыывфы
+            <FilterWrapper isOpened title={"Авиакомпании"}>
+              <Aviacompanies />
             </FilterWrapper>
-            <FilterWrapper title={"Трансфер"}>
-              контент \n контентыч аазазвы азфыфвыывфы
-            </FilterWrapper>
+            <FilterWrapper title={"Аэропорты"} />
           </div>
         </section>
       </Fragment>
