@@ -1,0 +1,192 @@
+@import "../../global.sass"
+.header
+  background: linear-gradient(121.89deg, #00B0DE 0.36%, #01AEDC 4.04%, #02ABDB 7.77%, #02ABDB 11.48%, #02ABDB 11.7%, #196EBD 100%)
+  min-height: 100vh
+  
+  &__logo-wrapper
+    display: flex
+    align-items: center
+    margin-top: 12px
+  &__company-name
+    display: none
+    +tablet
+      display: inline
+      margin-left: 12px
+      font-family: Roboto
+      line-height: 25px
+      font-size: 20px
+      color: #FFFFFF
+  &__text
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    font-size: 20px
+    color: #FFFFFF
+    margin: 16vh auto 16px auto
+    text-align: center
+    +tablet
+      margin: 20vh auto 8px auto
+      line-height: 48px
+      font-size: 32px
+    +desktop
+      font-size: 40px
+      margin: 32vh auto 8px auto
+  &__subtext
+    display: none
+    +tablet
+      display: block
+      margin: 8px auto 40px auto
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      line-height: normal
+      font-size: 20px
+      text-align: center
+      color: #FFFFFF
+      +desktop
+        font-size: 24px
+  &__search-filters
+    +tablet
+      display: flex
+      flex-wrap: wrap
+    +desktop
+      flex-wrap: nowrap
+    &__wrapper-top
+      +tablet
+        display: flex
+        flex-basis: 100%
+      +desktop
+        flex-basis: auto
+    &__from-city
+      border-top-left-radius: 4px
+      border-top-right-radius: 4px
+      background: #FFFFFF url('./SearchFilters/arrow.svg') no-repeat 95% 48%
+      padding: 16px
+      margin: 2px 0
+      +tablet
+        
+        border-top-left-radius: 4px
+        border-top-right-radius: 0px
+        flex-basis: 50%
+        margin-right: 2px
+      +desktop
+        flex-basis: auto
+        border-bottom-left-radius: 4px
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 60%
+      &__airport-name
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        line-height: 20px
+        font-size: 16px
+        text-align: center
+        color: #A0B0B9
+        padding-left: 16%
+        +desktop
+          padding-left: 10%
+    &__destination-city
+      background: #FFFFFF 
+      padding: 16px
+      margin: 2px 0
+      +tablet
+        flex-basis: 50%
+        min-width: 43.8%
+        border-top-right-radius: 4px
+      +desktop
+        flex-basis: auto
+        min-width: 40%
+        border-top-right-radius: 0px
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 80%
+    &__dates-picker
+      display: flex
+      width: 100%
+      margin: 2px 0
+      justify-content: center
+      +tablet
+        flex-basis: 54%
+        min-width: 49.8%
+        margin-top: 0
+      +desktop
+        flex-basis: auto
+        margin-top: 2px
+        min-width: 0
+      &__wrapper
+        width: 50%
+        background: #FFFFFF url('./SearchFilters/calendar.svg') no-repeat 90% 48% 
+        padding: 16px
+        &:nth-child(1)
+          +tablet
+            border-bottom-left-radius: 4px
+          +desktop
+            margin-left: 2px
+            border-bottom-left-radius: 0px
+        &:nth-child(2n)
+          margin-left: 2px
+          
+        &__input
+          border: white
+          font-family: Roboto
+          font-style: normal
+          font-weight: normal
+          line-height: 20px
+          font-size: 16px
+          width: 80%
+    &__passengers-picker
+      background: #FFFFFF 
+      padding: 16px
+      margin: 2px 0
+      +tablet
+        flex-basis: 50%
+        margin-left: 2px
+        margin-top: 0
+        border-bottom-right-radius: 4px
+      +desktop
+        margin-top: 2px
+        flex-basis: 50%
+        border-top-right-radius: 4px
+      &__input
+        border: white
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: 20px
+        font-size: 16px
+        width: 100%
+  &__search-button
+    background: #FF9241 url('./SearchButton/aero.svg') no-repeat 80% 50%
+    border-radius: 4px
+    padding: 14px 88px 16px 55px
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    font-size: 24px
+    color: #FFFFFF
+    border: none
+    margin: 16px 8px 88px 8px
+    width: 100%
+    cursor: pointer
+    
+    +tablet
+      max-width: 308px
+      margin: 32px auto 88px auto
+    +desktop
+      margin: 48px auto 88px auto
+
+    
+
