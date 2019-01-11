@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles.sass";
 import Logo from "./Logo";
 import HeaderText from "./HeaderText";
-import SearchFilters from "./SearchFilters";
+import SearchFilters from "./../../ui/SearchFilters";
 import SearchButton from "./SearchButton";
 class Header extends Component {
   state = {};

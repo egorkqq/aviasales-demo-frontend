@@ -3,10 +3,16 @@ import FromCity from "./FromCity";
 import DestinationCity from "./DestinationCity";
 import DatesPicker from "./DatesPicker";
 import PassengersPicker from "./PassengersPicker";
-import SearchButton from "./SearchButton";
+import SearchButton from "./../SearchButton";
+import { withRouter } from "react-router-dom";
+
 class SearchFilters extends Component {
   state = {};
   render() {
+    const fixer =
+      this.props.location.pathname === "/search"
+        ? "header__search-filters__dates-picker fixer"
+        : "header__search-filters__dates-picker";
     return (
       <section className={this.props.className || "header__search-filters"}>
         <div className="header__search-filters__wrapper-top">
@@ -14,13 +20,14 @@ class SearchFilters extends Component {
           <DestinationCity />
         </div>
         <div className="header__search-filters__wrapper-top">
-          <DatesPicker className="header__search-filters__dates-picker fixer" />
+          <DatesPicker className={fixer} />
           <PassengersPicker />
-          <SearchButton />
+          {console.log(this.props.location.pathname === "/search")}
+          {this.props.location.pathname === "/search" ? <SearchButton /> : null}
         </div>
       </section>
     );
   }
 }
 
-export default SearchFilters;
+export default withRouter(SearchFilters);

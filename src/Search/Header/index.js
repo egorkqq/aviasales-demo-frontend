@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles.sass";
 import logo from "./../../Home/Header/Logo/logo.svg";
-import SearchFilters from "./SearchFilters";
+import SearchFilters from "./../../ui/SearchFilters";
 import { Link } from "react-router-dom";
 class Header extends Component {
   state = {};
