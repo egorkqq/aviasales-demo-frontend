@@ -15,16 +15,20 @@ class Filter extends Component {
         </div>
         <section className="filters">
           <div className="filters__wrapper">
-            <FilterWrapper title={"Пересадки"}>
+            <FilterWrapper isOpened title={"Пересадки"}>
               <Transfers />
             </FilterWrapper>
             <FilterWrapper isOpened title={"Время вылета и прибытия"}>
               <DepartureAndArrivals />
             </FilterWrapper>
+            <FilterWrapper title={"Багаж"} />
+            <FilterWrapper title={"Длительность пересадки"} />
             <FilterWrapper isOpened title={"Авиакомпании"}>
               <Aviacompanies />
             </FilterWrapper>
+            <FilterWrapper title={"Время в пути"} />
             <FilterWrapper title={"Аэропорты"} />
+            <FilterWrapper title={"Агенства"} />
           </div>
         </section>
       </Fragment>
