@@ -1,0 +1,147 @@
+@import "../../global.sass"
+.header__search-filters__dates-picker
+  position: relative
+.header__search-filters__dates-picker__wrapper__content
+  position: absolute
+  background: #fff
+  top: 0
+  left: 0
+  width: 370px
+  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2), 0px 2px 4px rgba(74, 74, 74, 0.2)
+  border-radius: 2px
+.hide
+  display: none
+
+.Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) 
+  background-color: #f0f8ff 
+  color: #4a90e2
+
+.Selectable .DayPicker-Day 
+  border-radius: 0
+  font-family: Roboto
+  font-style: normal
+  font-weight: 500
+  line-height: 18px
+  font-size: 16px
+  text-align: center
+  color: #4A4A4A
+  &:after
+    content: "25 666"
+    display: block
+    font-family: Roboto
+    font-weight: 500
+    font-size: 10px
+    text-align: center
+    color: #00C455
+    white-space: nowrap
+    &:nth-child(2n)
+      content: "5 555"
+.Selectable .DayPicker-Day--start 
+  background: #EFFBFF
+.Selectable .DayPicker-Day--outside
+  &:after
+    display: none
+.Selectable .DayPicker-Day--disabled
+  color: rgba(74, 74, 74, 0.1)
+  &:after
+    display: none
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside)
+  background: #EFFBFF
+  outline: 0.8px solid #00ACE2
+  color: #4A4A4A
+.Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside)
+  background: #F4F4F4
+  border: none
+  color: #4A4A4A
+.DayPicker
+  width: 100%
+  padding-top: 18px
+  &-wrapper
+    padding-bottom: 0
+  &-Caption
+    font-family: Roboto
+    text-transform: uppercase
+    font-weight: bold
+    line-height: 18px
+    font-size: 14px
+    text-align: center
+    color: #4A4A4A
+    margin-bottom: 24px
+  &-NavButton
+    top: 0px
+    right: 32px
+    margin-top: 0
+    transform: scaleX(0.7)
+    &--prev
+      margin-right: 291px
+  &-Month
+    margin: 0
+    width: 88%
+  &-Weekdays
+    margin-top: 24px
+  &-Weekday
+    font-family: Roboto
+    font-style: normal
+    font-weight: 900
+    line-height: 18px
+    font-size: 14px
+    text-align: center
+    text-transform: uppercase
+    color: #5B5B5C
+
+.checkbox-wrapper
+  padding: 16px 36px
+.checkbox-label
+  display: flex;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 6px 0px 6px 47px;
+.checkbox-hidden
+  margin-right: 10px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+.checkbox-text 
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  font-family: Roboto
+  line-height: 18px;
+  font-size: 12px;
+  color: #4A4A4A;
+.checkbox-hidden:checked + .checkbox-text::before 
+  background: rgb(156, 204, 102);
+.checkbox-text::before 
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 37px;
+  height: 22px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px 0px inset;
+  margin: auto;
+  background: rgb(188, 205, 214);
+  border-radius: 100px;
+  transition: background 0.15s ease-out 0s;
+.checkbox-hidden:checked + .checkbox-text::after 
+  transform: translateX(17px);
+.checkbox-text::after 
+  content: "";
+  display: block;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 0px;
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  margin: auto 2px;
+  transition: transform 0.15s ease-out 0s;

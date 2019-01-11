@@ -5,7 +5,7 @@ import DatesPicker from "./DatesPicker";
 import PassengersPicker from "./PassengersPicker";
 import SearchButton from "./../SearchButton";
 import { withRouter } from "react-router-dom";
-
+import "./searchfilters.sass";
 class SearchFilters extends Component {
   state = {};
   render() {
@@ -22,7 +22,6 @@ class SearchFilters extends Component {
         <div className="header__search-filters__wrapper-top">
           <DatesPicker className={fixer} />
           <PassengersPicker />
-          {console.log(this.props.location.pathname === "/search")}
           {this.props.location.pathname === "/search" ? <SearchButton /> : null}
         </div>
       </section>
