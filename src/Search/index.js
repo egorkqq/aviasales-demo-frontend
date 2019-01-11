@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Results from "./Results";
 import Filters from "./Filters";
-import Header from "./Header";
 import { Helmet } from "react-helmet";
 const Search = () => {
   return (
@@ -9,7 +8,6 @@ const Search = () => {
       <Helmet>
         <title>Aviasales: Поиск</title>
       </Helmet>
-      <Header />
       <main className="search-wrapper">
         <div className="container">
           <div className="row">
