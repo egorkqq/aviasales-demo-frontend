@@ -34,8 +34,13 @@
     text-align: center
     color: #00C455
     white-space: nowrap
-    &:nth-child(2n)
-      content: "5 555"
+  &:nth-child(2n):after
+    content: "15 255"
+  &:nth-child(3n+1):after
+    content: "11 586"
+  &:nth-child(5n-3):after
+    content: "22 314"
+    color: #ccc
 .Selectable .DayPicker-Day--start 
   background: #EFFBFF
 .Selectable .DayPicker-Day--outside
