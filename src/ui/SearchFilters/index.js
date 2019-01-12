@@ -5,7 +5,7 @@ import DatesPicker from "./DatesPicker";
 import PassengersPicker from "./PassengersPicker";
 import SearchButton from "./../SearchButton";
 import { withRouter } from "react-router-dom";
-import "./searchfilters.sass";
+
 class SearchFilters extends Component {
   state = {};
   render() {

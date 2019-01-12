@@ -1,0 +1,76 @@
+.react-autosuggest__container
+  position: relative
+  display: inline
+.react-autosuggest__input
+  border: white
+  font-family: Roboto
+  font-style: normal
+  font-weight: normal
+  line-height: 20px
+  font-size: 16px
+  display: inline-block
+  width: 60%
+  &:focus
+    outline: none
+
+.react-autosuggest__container--open .react-autosuggest__input
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+.react-autosuggest__suggestions-container
+  display: none
+
+.react-autosuggest__container--open .react-autosuggest__suggestions-container
+  display: block
+  position: absolute
+  top: 37px
+  left: -16px
+  width: 184%
+  border: 1px solid #aaa
+  font-family: Roboto
+  z-index: 2
+  background: #FFFFFF
+  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2), 0px 2px 4px rgba(74, 74, 74, 0.2)
+  border-radius: 2px
+
+.react-autosuggest__suggestions-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.react-autosuggest__suggestion
+  cursor: pointer
+  padding: 15px 16px
+  &:nth-child(2n)
+    background: #f4f4f4
+
+.react-autosuggest__suggestion--focused
+  background-color: #0C7EAF
+  color: #fff
+
+.suggestion-content
+  display: flex
+  justify-content: space-between
+  background-repeat: no-repeat
+  width: 100%
+  &__city
+    font-weight: 400
+    line-height: 18px
+    font-size: 14px
+    color: #4a4a4a
+    margin-right: 2px
+  &__country
+    font-family: Roboto
+    font-weight: 300
+    line-height: 18px
+    font-size: 14px
+    color: #A0B0B9
+    margin-right: auto
+  &__airport
+    font-family: Roboto
+    font-weight: 300
+    line-height: 18px
+    font-size: 12px
+    text-align: right
+    color: #A0B0B9
+    text-decoration: none !important

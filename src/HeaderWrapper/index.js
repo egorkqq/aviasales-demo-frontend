@@ -13,6 +13,12 @@ class Header extends Component {
     const headerWidth = homePage ? "header" : "header killer";
     return (
       <header className={headerWidth}>
+        {homePage && (
+          <div className="tip">
+            Для проверки поля ввода введите "б", для перехода на страницу поиска
+            нажмите кнопку "Найти билеты"
+          </div>
+        )}
         <div className="container">
           <div className="row">
             <div className="col-xs-12">

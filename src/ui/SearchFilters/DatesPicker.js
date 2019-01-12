@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DayPicker, { DateUtils } from "react-day-picker";
 import "react-day-picker/lib/style.css";
-
+import "./DatesPicker.sass";
 const WEEKDAYS_SHORT = {
   ru: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"]
 };
@@ -167,10 +167,10 @@ class Example extends React.Component {
             }
           ]}
         />
-        <div class="checkbox-wrapper">
-          <label class="checkbox-label">
-            <input type="checkbox" class="checkbox-hidden" value="on" />
-            <p class="checkbox-text">Показать цены в одну сторону</p>
+        <div className="checkbox-wrapper">
+          <label className="checkbox-label">
+            <input type="checkbox" className="checkbox-hidden" value="on" />
+            <p className="checkbox-text">Показать цены в одну сторону</p>
           </label>
         </div>
       </div>
