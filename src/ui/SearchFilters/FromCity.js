@@ -3,7 +3,7 @@ import "./SearchInput.sass";
 import Example from "./AutoInput";
 class FromCity extends Component {
   state = {
-    airport: "mow"
+    airport: "AIR"
   };
 
   updateAirport = value => this.setState({ airport: value });
