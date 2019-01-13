@@ -1,76 +1,11 @@
 import React, { Component } from "react";
-import DayPicker, { DateUtils } from "react-day-picker";
 import "react-day-picker/lib/style.css";
 import "./DatesPicker.sass";
-const WEEKDAYS_SHORT = {
-  ru: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"]
-};
-const MONTHS = {
-  ru: [
-    "Январь",
-    "Февраль",
-    "Март",
-    "Апрель",
-    "Май",
-    "Июнь",
-    "Июль",
-    "Август",
-    "Сентябрь",
-    "Октябрь",
-    "Ноябрь",
-    "Декабрь"
-  ]
-};
 
-const WEEKDAYS_LONG = {
-  ru: [
-    "Воскресенье",
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота"
-  ]
-};
+import Template from "./DatesPickerTemplate";
+import Calendar from "./Calendar";
 
-const FIRST_DAY_OF_WEEK = {
-  ru: 1
-};
-// Translate aria-labels
-const LABELS = {
-  ru: { nextMonth: "следующий месяц", previousMonth: "предыдущий месяц" }
-};
-
-class Template extends Component {
-  state = { value: "" };
-  componentWillReceiveProps = nextProps => {
-    this.setState({ value: nextProps.value });
-  };
-  enterManually = e => {
-    this.setState({ value: e.target.value });
-  };
-  render() {
-    return (
-      <div
-        onClick={this.props.onToggleCalendar}
-        className="header__search-filters__dates-picker__wrapper"
-      >
-        <label>
-          <input
-            className="header__search-filters__dates-picker__wrapper__input"
-            type="text"
-            placeholder={this.props.placeholder}
-            value={this.state.value}
-            onChange={this.enterManually}
-          />
-        </label>
-      </div>
-    );
-  }
-}
-
-class DatesPicker extends React.Component {
+class DatesPicker extends Component {
   state = { isOpened: false, from: undefined, to: undefined };
   toggle = () => {
     this.setState(prevState => {
@@ -85,6 +20,9 @@ class DatesPicker extends React.Component {
         to: to.toLocaleDateString()
       });
     to && this.toggle();
+  };
+  offCalendar = () => {
+    this.setState({ isOpened: false });
   };
   render() {
     return (
@@ -107,72 +45,12 @@ class DatesPicker extends React.Component {
         />
         {this.state.isOpened && (
           <div className="header__search-filters__dates-picker__wrapper__content">
-            <Example updateData={this.updateData} />
+            <Calendar
+              updateData={this.updateData}
+              offCalendar={this.offCalendar}
+            />
           </div>
         )}
-      </div>
-    );
-  }
-}
-
-class Example extends React.Component {
-  static defaultProps = {
-    numberOfMonths: 1
-  };
-  constructor(props) {
-    super(props);
-    this.handleDayClick = this.handleDayClick.bind(this);
-    this.handleResetClick = this.handleResetClick.bind(this);
-    this.state = this.getInitialState();
-  }
-  getInitialState() {
-    return {
-      from: undefined,
-      to: undefined,
-      locale: "ru"
-    };
-  }
-  handleDayClick(day, modifiers = {}) {
-    if (modifiers.disabled) {
-      return;
-    }
-    const range = DateUtils.addDayToRange(day, this.state);
-    this.setState(range);
-    this.props.updateData(range);
-  }
-  handleResetClick() {
-    this.setState(this.getInitialState());
-  }
-  render() {
-    const { from, to, locale } = this.state;
-    const modifiers = { start: from, end: to };
-    return (
-      <div className="RangeExample">
-        <DayPicker
-          locale={locale}
-          months={MONTHS[locale]}
-          weekdaysLong={WEEKDAYS_LONG[locale]}
-          weekdaysShort={WEEKDAYS_SHORT[locale]}
-          firstDayOfWeek={FIRST_DAY_OF_WEEK[locale]}
-          labels={LABELS[locale]}
-          className="Selectable"
-          numberOfMonths={this.props.numberOfMonths}
-          selectedDays={[from, { from, to }]}
-          modifiers={modifiers}
-          onDayClick={this.handleDayClick}
-          disabledDays={[
-            {
-              after: new Date(0),
-              before: new Date()
-            }
-          ]}
-        />
-        <div className="checkbox-wrapper">
-          <label className="checkbox-label">
-            <input type="checkbox" className="checkbox-hidden" value="on" />
-            <p className="checkbox-text">Показать цены в одну сторону</p>
-          </label>
-        </div>
       </div>
     );
   }
