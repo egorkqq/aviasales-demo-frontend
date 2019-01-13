@@ -7,9 +7,11 @@ class Results extends Component {
   render() {
     return (
       <section className="results">
-        {tickets.map((el, index) => {
-          return <Ticket data={el} key={index} />;
-        })}
+        <ul className="results__tickets">
+          {tickets.map((el, index) => {
+            return <Ticket data={el} key={index} />;
+          })}
+        </ul>
         <button className="results__more-tickets">
           Показать еще 10 билетов!
         </button>

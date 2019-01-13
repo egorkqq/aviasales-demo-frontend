@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Helmet } from "react-helmet";
-import Header from "./Header";
 import "flexboxgrid2";
 import PopularWays from "./PopularWays";
 import BestPrices from "./BestPrices";
@@ -16,7 +15,7 @@ class Home extends Component {
         <Helmet>
           <title>Aviasales: Главная</title>
         </Helmet>
-        <Header />
+
         <main>
           <PopularWays />
           <BestPrices />

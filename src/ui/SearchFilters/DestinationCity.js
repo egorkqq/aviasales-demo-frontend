@@ -1,14 +1,11 @@
 import React from "react";
+import Example from "./AutoInput";
 
 const DestinationCity = () => {
   return (
     <div className="header__search-filters__destination-city">
       <label>
-        <input
-          className="header__search-filters__destination-city__input"
-          type="text"
-          placeholder="Город прибытия"
-        />
+        <Example placeholder={"Куда"} updateAirport={() => {}} />
       </label>
     </div>
   );

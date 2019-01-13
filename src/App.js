@@ -4,6 +4,7 @@ import Search from "./Search";
 import "flexboxgrid2";
 import "normalize.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import HeaderWrapper from "./HeaderWrapper";
 import Footer from "./Home/Footer";
 
 import { IntlProvider, addLocaleData } from "react-intl";
@@ -24,6 +25,7 @@ function App() {
     <IntlProvider locale="ru" messages={messages}>
       <BrowserRouter>
         <Fragment>
+          <HeaderWrapper />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/search" component={Search} />
