@@ -4,7 +4,6 @@ import Checkbox from "../../Search/Filters/Checkbox";
 class PassengersChoose extends Component {
   state = {};
   handleClickOutside = evt => {
-    console.log("suck");
     this.props.disableContent();
   };
   render() {
