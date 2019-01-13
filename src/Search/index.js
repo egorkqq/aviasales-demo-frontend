@@ -8,7 +8,7 @@ const Search = () => {
       <Helmet>
         <title>Aviasales: Поиск</title>
       </Helmet>
-      <main className="search-wrapper">
+      <main className="hidden-xs search-wrapper">
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-xl-3">
@@ -19,6 +19,10 @@ const Search = () => {
             </div>
           </div>
         </div>
+      </main>
+      <main className="warning-mobile">
+        Данная страница имеет верстку только для устройств с шириной экрана
+        более 768px. Попробуйте перевернуть ваш девайс :)
       </main>
     </Fragment>
   );
