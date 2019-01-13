@@ -132,12 +132,12 @@ self.__precacheManifest = [
     "url": "/aviasales-demo-frontend/static/media/backgroundImage@2x.27eda2c3.png"
   },
   {
-    "revision": "3a081e0c82d5e32f6219fd95635cd55e",
-    "url": "/aviasales-demo-frontend/static/media/compass.3a081e0c.svg"
-  },
-  {
     "revision": "8cbc0434c937cf2c6a95d3508fb4081b",
     "url": "/aviasales-demo-frontend/static/media/edit.8cbc0434.svg"
+  },
+  {
+    "revision": "3a081e0c82d5e32f6219fd95635cd55e",
+    "url": "/aviasales-demo-frontend/static/media/compass.3a081e0c.svg"
   },
   {
     "revision": "39d83d87d366035f1392eb40dd276e73",
@@ -164,12 +164,12 @@ self.__precacheManifest = [
     "url": "/aviasales-demo-frontend/static/media/baggage.17f4548a.svg"
   },
   {
-    "revision": "3ea7a3cb626fc983daaf5f1fc41e602f",
-    "url": "/aviasales-demo-frontend/static/media/plane.3ea7a3cb.svg"
-  },
-  {
     "revision": "7b69323095c0b4ecbb1868961946abfb",
     "url": "/aviasales-demo-frontend/static/media/bag.7b693230.svg"
+  },
+  {
+    "revision": "3ea7a3cb626fc983daaf5f1fc41e602f",
+    "url": "/aviasales-demo-frontend/static/media/plane.3ea7a3cb.svg"
   },
   {
     "revision": "6d43d9b5fdd6574e9b9120adb9628b5d",
