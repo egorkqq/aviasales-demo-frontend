@@ -19,7 +19,7 @@ class Ticket extends Component {
     } = this.props.data;
 
     return (
-      <div className="results__ticket">
+      <li className="results__ticket">
         <div className="results__ticket__buy">
           <div className="results__ticket__buy__wrapper-baggage">
             <div className="results__ticket__buy__wrapper-baggage__mini">
@@ -236,7 +236,7 @@ class Ticket extends Component {
         <div className="results__ticket__open">
           <div className="results__ticket__open-icon" />
         </div>
-      </div>
+      </li>
     );
   }
 }
