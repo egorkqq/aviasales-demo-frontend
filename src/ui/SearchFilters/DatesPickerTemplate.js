@@ -1,25 +1,33 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
 class Template extends Component {
-  state = { value: "" };
-  componentWillReceiveProps = nextProps => {
+  state = { value: '' };
+
+  componentWillReceiveProps = (nextProps) => {
     this.setState({ value: nextProps.value });
   };
-  enterManually = e => {
+
+  enterManually = (e) => {
     this.setState({ value: e.target.value });
   };
 
   render() {
+    const { onToggleCalendar, placeholder } = this.props;
+    const { value } = this.state;
     return (
       <div
-        onClick={this.props.onToggleCalendar}
+        onKeyPress={onToggleCalendar}
+        onClick={onToggleCalendar}
         className="header__search-filters__dates-picker__wrapper"
+        role="presentation"
       >
-        <label>
+        <label htmlFor="dates-picker">
           <input
+            id="dates-picker"
             className="header__search-filters__dates-picker__wrapper__input"
             type="text"
-            placeholder={this.props.placeholder}
-            value={this.state.value}
+            placeholder={placeholder}
+            value={value}
             onChange={this.enterManually}
           />
         </label>

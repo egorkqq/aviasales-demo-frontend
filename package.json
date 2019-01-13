@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "date-fns": "^1.30.1",
+    "eslint-config-airbnb": "^17.1.0",
     "flexboxgrid2": "^7.2.1",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "pluralize-ru": "^1.0.1",
+    "prop-types": "^15.6.2",
     "rc-slider": "^8.6.4",
     "react": "^16.7.0",
     "react-autosuggest": "^9.4.3",
@@ -30,7 +32,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "eslint-config-airbnb"
   },
   "browserslist": [
     ">0.2%",

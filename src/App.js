@@ -1,23 +1,24 @@
-import React, { Fragment } from "react";
-import Home from "./Home";
-import Search from "./Search";
-import "flexboxgrid2";
-import "normalize.css";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import HeaderWrapper from "./HeaderWrapper";
-import Footer from "./Home/Footer";
+import React, { Fragment } from 'react';
+import 'flexboxgrid2';
+import 'normalize.css';
+import {
+  BrowserRouter, Route, Switch, Redirect,
+} from 'react-router-dom';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import ru from 'react-intl/locale-data/ru';
 
-import { IntlProvider, addLocaleData } from "react-intl";
-import ru from "react-intl/locale-data/ru";
+import Home from './Home';
+import Search from './Search';
+import HeaderWrapper from './HeaderWrapper';
+import Footer from './Home/Footer';
 
 addLocaleData(ru);
 
 const messages = {
-  "react-intl-formatted-duration/custom-format/extra_short":
-    "{hours} {minutes}",
-  "react-intl-formatted-duration.duration": "{value} {unit}",
-  "react-intl-formatted-duration.hoursUnit": "{value, plural, other{ч}}",
-  "react-intl-formatted-duration.minutesUnit": "{value, plural, other{м}}"
+  'react-intl-formatted-duration/custom-format/extra_short': '{hours} {minutes}',
+  'react-intl-formatted-duration.duration': '{value} {unit}',
+  'react-intl-formatted-duration.hoursUnit': '{value, plural, other{ч}}',
+  'react-intl-formatted-duration.minutesUnit': '{value, plural, other{м}}',
 };
 
 function App() {
